@@ -1,0 +1,8 @@
+md5: e4f00c5d7f54ec8e07afdab48395ae58
+wdir: .
+outs:
+- md5: c2c7d6bb814c2646cce8cb09c566efd0
+  path: test_result_seedling.record
+  cache: true
+  metric: false
+  persist: false

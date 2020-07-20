@@ -1,0 +1,8 @@
+md5: f9576198a418d71d5f2476a1f67f8534
+wdir: ../..
+outs:
+- md5: 4cdd239a228bd4e24da89ae889ca3ca0.dir
+  path: data/interim/high_srgan
+  cache: true
+  metric: false
+  persist: false

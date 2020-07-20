@@ -1,0 +1,8 @@
+md5: 62deff07e84d65350d7f9c453f050a21
+wdir: .
+outs:
+- md5: b941abecae909eebd0503b95477a1e73.dir
+  path: separated_data
+  cache: true
+  metric: false
+  persist: false

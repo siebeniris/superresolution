@@ -1,0 +1,8 @@
+md5: 7f44ad2fa32630ee71784d4a06a48291
+wdir: ../../../..
+outs:
+- md5: f8bf8f95ed4c61f45b5ce567c8f85cc6.dir
+  path: data/processed/sftgan/train/result_178000
+  cache: true
+  metric: false
+  persist: false

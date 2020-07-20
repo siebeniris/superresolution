@@ -1,0 +1,23 @@
+# This is a Docker image for running the tests.
+# It should be pushed to registry.gitlab.lrz.de/team4/superresoluton
+# and will be used by CI as declared in .gitlab-ci.yml.
+#
+# Commands for updating the image:
+# docker build -t gitlab.lrz.de:5005/team4/superresoluton/test/python:2.7 - < ci/gitlab-ci.Dockerfile.python2.7
+# docker push gitlab.lrz.de:5005/team4/superresoluton/test
+# potentially build must be run with --network=host option
+
+FROM continuumio/miniconda2:latest
+
+RUN apt-get update && apt-get install -y \
+  sudo \
+  python \
+  python-pip \
+  libsm6 \
+  libxext6
+
+RUN pip install \
+  flake8 \
+  flake8-html \
+  autopep8
+

@@ -1,0 +1,8 @@
+md5: 591c8e31495cec52ceea41ca31be7ae8
+wdir: .
+outs:
+- md5: 37986fd2e6301154a448c1ef35f8bb9f
+  path: data_464_466_sw_all_0.2.train
+  cache: true
+  metric: false
+  persist: false

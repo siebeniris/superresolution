@@ -1,0 +1,26 @@
+% Copyright 2018 by Max Berrendorf
+\definecolor{beamer@lmu_green}{RGB}{0,148,64}
+\definecolor{beamer@lmu_dark_gray}{RGB}{127,127,127}
+\definecolor{beamer@lmu_light_gray}{RGB}{192,192,192}
+
+\setbeamercolor*{structure}{fg=beamer@lmu_green, bg=beamer@lmu_light_gray}
+
+\setbeamercolor*{example text}{parent=normal text, bg=beamer@lmu_light_gray}
+
+% Normal block
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10}
+
+% Example Block
+\setbeamercolor{block title example}{use=example text,fg=white,bg=beamer@lmu_dark_gray}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!20}
+
+% Alert Block
+\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=alerted text.fg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10}
+
+% Title page
+\setbeamercolor*{titlelike}{fg=structure.fg, bg=}
+\setbeamercolor{author}{fg=beamer@lmu_dark_gray,bg=}
+\setbeamercolor{institute}{fg=beamer@lmu_dark_gray,bg=}
+

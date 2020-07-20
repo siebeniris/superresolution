@@ -1,0 +1,5 @@
+data/interim/datasets/test/s464_5m-1710-gelabelt-DJI_0057-DJI_0057-2560-1536.JPG
+data/interim/datasets/test/s464_5m-1710-gelabelt-DJI_0082-DJI_0082-2048-512.JPG
+data/interim/datasets/test/s464_5m-1710-gelabelt-DJI_0080-DJI_0080-2048-2048.JPG
+data/interim/datasets/test/s464_5m-1710-gelabelt-DJI_0073-DJI_0073-1024-1536.JPG
+

@@ -1,0 +1,120 @@
+% Copyright 2018 by Max Berrendorf
+\newlength{\logoheight}
+\newlength{\logosep}
+\setlength{\logoheight}{.10\paperheight}
+\setlength{\logosep}{.01\paperheight}
+
+\setbeamertemplate{frametitle}{}
+\setbeamertemplate{headline}
+{
+	\leavevmode%
+	\begin{tikzpicture}[remember picture,overlay]
+		%% Define coordinates
+		% Headline Box
+		\coordinate (box-upperleft) at (current page.north west);
+		\coordinate[yshift={-2.0*\logosep-\logoheight}] (box-lowerright) at (current page.north east);
+		
+		% Logo
+		% Logo: Image
+		\coordinate[yshift=-\logosep, xshift=\logosep] (img-anchor) at (current page.north west);
+		
+		
+		% Logo: Word
+		\coordinate[yshift=-\logosep, xshift={2.0*\logosep+\logoheight}] (word-anchor) at (current page.north west);
+		
+		
+		% Title
+		\coordinate[yshift=-\logosep, xshift={3.0*\logosep+2.0*\logoheight}] (title-upperleft) at (current page.north west);
+		\coordinate[yshift={-\logosep-\logoheight}, xshift={-3.0*\logosep-2.0*\logoheight}] (title-lowerright) at (current page.north east);
+		\coordinate[yshift=-\logosep-\logoheight, xshift={3.0*\logosep+2.0*\logoheight}] (title-text-anchor) at (current page.north west);
+		
+		
+		
+		% Seal
+		\coordinate[yshift=-\logosep, xshift={-2.0*\logosep-2.0\logoheight}] (seal-box-upperleft) at (current page.north east);
+		\coordinate[yshift=-\logosep-\logoheight, xshift={-\logosep}] (seal-box-lowerright) at (current page.north east);
+		\coordinate[yshift=-\logosep-0.5\logoheight, xshift={-\logoheight-2.0*\logosep}] (seal-anchor) at (current page.north east);
+		
+		%% draw
+		% Background Box
+		\fill[structure.bg] (box-upperleft) rectangle (box-lowerright);
+		
+		% Logo
+		\node[anchor=north west, inner sep=0cm] at (img-anchor) {\includegraphics[height=\logoheight, width=\logoheight,keepaspectratio]{lmu_cd/image}};
+		\node[anchor=north west, inner sep=0cm] at (word-anchor) {\includegraphics[height=\logoheight, width=\logoheight,keepaspectratio]{lmu_cd/word}};
+		
+		% Title box
+		\draw[structure.fg] (title-upperleft) rectangle (title-lowerright);
+		\draw (title-text-anchor) node[anchor=south west, text=beamer@lmu_green, text width={\paperwidth-6.0*\logosep-4.0*\logoheight}] {\usebeamercolor{title}\usebeamerfont{frametitle}\insertframetitle\strut};
+		
+		
+		% Seal Box
+		\draw[structure.fg] (seal-box-upperleft) rectangle (seal-box-lowerright);
+		
+		% Seal
+		\clip (seal-box-upperleft) rectangle (seal-box-lowerright);
+		\draw[opacity=.2] (seal-anchor) node[anchor=west] {\includegraphics[height=1.5\logoheight]{lmu_cd/seal}};
+	\end{tikzpicture}%
+}
+
+\setbeamertemplate{footline}
+{
+	\leavevmode%
+	\begin{tikzpicture}[remember picture,overlay]
+		\fill[structure.bg, opacity=.7] (current page.south west) rectangle +(\paperwidth, 0.03\paperheight);
+	\end{tikzpicture}%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=0.03\paperheight, left]{bg=}%
+			\usebeamerfont{author in head/foot}~\insertshortauthor~(\insertshortinstitute)
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=0.03\paperheight, center]{bg=}%
+			\usebeamerfont{title in head/foot}\insertshorttitle
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=0.03\paperheight, right]{bg=}%
+			\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+		\end{beamercolorbox}%
+	}
+}
+
+\setbeamertemplate{title page}{%
+	\usebeamerfont{title in head/foot}
+	\begin{tikzpicture}[remember picture,overlay]
+		% Headline
+		\fill[structure.bg] (current page.north west) rectangle +(\paperwidth, {-2*\logosep-\logoheight});
+		
+		% Logo
+		\node[anchor=north west, inner sep=.01\paperheight] at (current page.north west) {\includegraphics[height=\logoheight, width=\logoheight,keepaspectratio]{lmu_cd/image}\hspace{\logosep}\includegraphics[height=\logoheight, width=\logoheight,keepaspectratio]{lmu_cd/word}};
+		
+		% Footline
+		\fill[structure.bg, opacity=.7] (current page.south west) rectangle +(\paperwidth, 0.03\paperheight);
+		
+		% Seal
+		\clip (current page.south west) rectangle (current page.north east);
+		\draw[opacity=.2] (current page.south east) node[xshift=-.12\paperwidth, yshift=.19\paperheight] {\includegraphics[height=.55\paperheight]{lmu_cd/seal}};
+	\end{tikzpicture}%
+	\vspace{.15\paperheight}\\
+	\begin{beamercolorbox}[left]{institute}
+		\usebeamercolor{institute}%
+		\usebeamerfont{institute}%
+		\insertinstitute
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[left]{author}
+		\usebeamercolor{author}%
+		\usebeamerfont{author}%
+		\insertauthor
+	\end{beamercolorbox}
+	\vfill
+	\begin{beamercolorbox}[left]{title}
+		\usebeamercolor{title}%
+		\usebeamerfont{title}%
+		\bfseries%
+		\inserttitle%
+	\end{beamercolorbox}
+	\vfill
+	\begin{beamercolorbox}[left]{subtitle}
+		\usebeamercolor{subtitle}%
+		\usebeamerfont{subtitle}%
+		\insertsubtitle%
+	\end{beamercolorbox}
+	\vspace{.1\paperheight}
+}

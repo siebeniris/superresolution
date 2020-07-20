@@ -1,0 +1,41 @@
+name: superresolution
+
+# conda environment
+conda_env: conda.yaml
+
+# MLFlow entry points, similar to makefile targets
+entry_points:
+  hello_world:
+#    parameters:
+#      alpha: {type: float, default: 0.1}
+    command: "python3 -m src.hello_world"
+
+  splitdata:
+    parameters:
+      test_set_ratio: {type: float, default: 0.2}
+      set: {type: string, default: 464}
+      season: {type: string, default: s}
+    command: "python3 src/data/train_test.py -p {test_set_ratio} --set {set} -sw {season}"
+
+  gen_tf_records:
+    parameters:
+      include_nolables: {type: string, default: True}
+    command: "python3 ./src/data/generate_tf_records_all.py --labeled_data_dir data/interim/separated_data/labeled/images --output_dir data/interim --coords_dir data/interim/coords_dict.json --all {include_nolables} --unlabeled_data_dir data/interim/separated_data/unlabeled"
+
+  train:
+    parameters:
+      pipeline_config_path: {type: string, default: models/faster_rcnn_resnet50/faster_rcnn_resnet50.config}
+      model_dir: {type: string, default: models/faster_rcnn_resnet50}
+      num_train_steps: {type: int, default: 50000}
+    command: "python models/research/object_detection/model_main.py --pipeline_config_path={pipeline_config_path} --model_dir={model_dir} --num_train_steps={num_train_steps} --alsologtostderr"
+
+
+  train-srgan:
+    parameters:
+      crop_size: {type: int, default: 512}
+      epochs: {type: int, default: 60}
+      batch_size: {type: int, default: 1}
+      train_set: {type: string, default: data/interim/datasets/train}
+      test_set: {type: string, default: data/interim/datasets/test}
+      upscale_factor: {type: int, default: 2}
+    command: "python3 -m src.srgan.srgan_train --epochs={epochs} --batch_size={batch_size} --train_set={train_set} --test_set={test_set} --upscale_factor={upscale_factor} --crop_size={crop_size}"

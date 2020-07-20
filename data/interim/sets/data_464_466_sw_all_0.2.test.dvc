@@ -1,0 +1,8 @@
+md5: fa84d71f9c6a7dd107dfebcba37b032a
+wdir: .
+outs:
+- md5: e0270847d1679ea58276534d38abc3b1
+  path: data_464_466_sw_all_0.2.test
+  cache: true
+  metric: false
+  persist: false

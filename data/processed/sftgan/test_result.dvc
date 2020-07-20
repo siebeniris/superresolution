@@ -1,0 +1,8 @@
+md5: d87f7acdeb18758a62f3674aa1849c4a
+wdir: .
+outs:
+- md5: ffd0182f95d26523379d4e5275c37809.dir
+  path: test_result
+  cache: true
+  metric: false
+  persist: false

@@ -1,0 +1,12 @@
+/data
+/separated_data
+/datasets
+/images_30m_slices
+/images_30m_slices.txt
+/images_30m_slices.record
+/images_30m_slices_seedling.record
+
+/images_5m_seedling.record
+/images_5m_seedling_bicubic.record
+/tf_records
+/high_srgan

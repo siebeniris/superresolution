@@ -1,0 +1,8 @@
+md5: 6e0ae650599e02753672773b4f68207f
+outs:
+- cache: true
+  md5: 44443c082d4b5c5a92f79dabf6d6fdc6
+  metric: false
+  path: site_464_201710_030m_ortho_als11_3channels.tif
+  persist: false
+wdir: .

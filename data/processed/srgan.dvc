@@ -1,0 +1,8 @@
+md5: a2bac3784df4b1bdb40ac4ae9b4dc539
+wdir: .
+outs:
+- md5: dd73643085131f57e0d30f072f22b229.dir
+  path: srgan
+  cache: true
+  metric: false
+  persist: false

@@ -1,0 +1,8 @@
+md5: 063cfa81188497fa4b8d5acb2f75b9cc
+wdir: .
+outs:
+- md5: 42d029f34f24f39488fcdb07015ae77b.dir
+  path: tf_records
+  cache: true
+  metric: false
+  persist: false

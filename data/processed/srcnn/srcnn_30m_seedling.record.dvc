@@ -1,0 +1,8 @@
+md5: 288a444336c2f969a0b9897b6fa9c6c6
+wdir: .
+outs:
+- md5: 3eabbfd6d634af3bc923c3d338d2e9c4
+  path: srcnn_30m_seedling.record
+  cache: true
+  metric: false
+  persist: false

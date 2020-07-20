@@ -1,0 +1,8 @@
+md5: ebb0aeea19d460e73a810d5671c28644
+wdir: .
+outs:
+- md5: 0f91c7161cafb0c57582e998f6055f92
+  path: images_30m_slices_result.record
+  cache: true
+  metric: false
+  persist: false

@@ -1,0 +1,30 @@
+name: sr-gpu
+channels:
+  - defaults
+  - anaconda
+  - tensorflow
+  - pytorch
+dependencies:
+  - pip
+  - tensorflow-gpu
+  - pandas
+  - scikit-learn
+  - scikit-image
+  - pytorch
+  - torchvision
+  - lxml
+  - pillow
+  - matplotlib
+  - jupyter
+  - cython
+  - contextlib2
+  - cudatoolkit=10.0
+  - numpy
+  - tqdm
+  - pip:
+    - pysftp
+    - dvc[ssh]
+    - mlflow
+    - opencv-python
+    - tensorlayer
+    - pytorch_ssim

@@ -1,0 +1,23 @@
+name: superresolution
+channels:
+  - defaults
+dependencies:
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - scikit-image
+  - pytorch
+  - torchvision
+  - tensorflow
+  - lxml
+  - pillow 
+  - matplotlib
+  - jupyter
+  - Cython
+  - contextlib2
+  - pip:
+    - pysftp
+    - mlflow
+    - dvc[ssh]
+    - opencv-python

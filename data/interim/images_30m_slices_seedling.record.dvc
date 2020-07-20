@@ -1,0 +1,8 @@
+md5: e07f31ef6be83f8bbcf5951a8d29274d
+wdir: .
+outs:
+- md5: 986bea71189d4235fbd5aaa8de3ea7b6
+  path: images_30m_slices_seedling.record
+  cache: true
+  metric: false
+  persist: false

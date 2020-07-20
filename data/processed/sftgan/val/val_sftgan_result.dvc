@@ -1,0 +1,8 @@
+md5: 504e4fecd1abacdcfc925742724aaf11
+wdir: .
+outs:
+- md5: b2452e3b1dc12710bd476c2ff660eb44.dir
+  path: val_sftgan_result
+  cache: true
+  metric: false
+  persist: false

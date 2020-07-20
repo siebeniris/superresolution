@@ -1,0 +1,8 @@
+md5: e49f30c3679bb7a4311eab8a9d4984b8
+wdir: .
+outs:
+- md5: 316f18b52ebd7ddfa43d64536045cf84.dir
+  path: test20190617160600_bicubic
+  cache: true
+  metric: false
+  persist: false

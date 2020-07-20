@@ -1,0 +1,8 @@
+md5: a1e34497496eed1b86cba7e6ee12b30d
+wdir: .
+outs:
+- md5: e79f0504a9646c9981ac36c515b1635c
+  path: images_30m_slices.txt
+  cache: true
+  metric: false
+  persist: false
